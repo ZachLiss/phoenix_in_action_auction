@@ -1,0 +1,7 @@
+<ul>
+	<%= for item <- @items do %>
+		<li>
+			<strong><%= item.title %>: <%= item.description %>
+		</li>
+	<% end %>
+</ul>
