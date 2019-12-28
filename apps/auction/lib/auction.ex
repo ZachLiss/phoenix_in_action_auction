@@ -34,4 +34,9 @@ defmodule Auction do
   def new_item() do
     Item.changeset(%Item{})
   end
+
+  def edit_item(id) do
+    get_item(id)
+    |> Item.changeset()
+  end
 end
