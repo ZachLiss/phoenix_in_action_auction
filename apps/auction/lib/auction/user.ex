@@ -9,6 +9,8 @@ defmodule Auction.User do
     # virtual means that this field won't be persisted to the db
     field(:password, :string, virtual: true)
     field(:hashed_password, :string)
+    has_many(:bids, Auction.Bid)
+
     timestamps()
   end
 
